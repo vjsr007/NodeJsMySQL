@@ -13,28 +13,4 @@ router.get('/home', function(req, res){
   });
 });
 
-router.get('/pais', function(req, res){
-  res.render('pais', {
-    title: 'País'
-  });
-});
-
-router.get('/estado', function(req, res){
-  res.render('estado', {
-    title: 'Estado'
-  });
-});
-
-router.post('/ciudadjson', function(req, res, next) {
-	var ciudad = require('../model/ciudad.js');
-	 
-	ciudad.obtenerCiudades().then(result => { res.send(result); }).catch(error => { res.send({error: error}); });
-});
-
-router.post('/paisjson', function(req, res, next) {
-	var pais = require('../model/pais.js');
-	 
-	pais.obtenerPaises().then(result => { res.send(result); }).catch(error => { res.send({error: error}); });
-});
-
 module.exports = router;

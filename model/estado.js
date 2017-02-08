@@ -1,5 +1,5 @@
  //Obtiene ciudades
- exports.obtenerPaises = function(params){ 
+ exports.obtenerEstados = function(){ 
   return new Promise(function (resolve, reject){
 	var db = require('../config/database.js');
 	var mysql = require('mysql');
@@ -7,7 +7,7 @@
 
 	connection.connect(function(err){
 		if(!err) {
-			connection.query('SELECT * FROM pais', function(err, rows, fields) {
+			connection.query('SELECT * FROM estado', function(err, rows, fields) {
 			connection.end();
 			if (!err)
 				resolve(rows);
