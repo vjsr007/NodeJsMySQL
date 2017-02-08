@@ -1,0 +1,86 @@
+doctype
+html
+  head
+    title= title + " NodeJsMySQL"
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    meta(name="viewport",content="width=device-width, initial-scale=1")
+    meta(name="description",content="")
+    meta(name="author",content="")
+
+    link(rel='stylesheet', href='/stylesheets/ui.jqgrid.css')
+
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+
+    link(rel='stylesheet', href='/stylesheets/sb-admin-2.css')
+    
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+
+    link(rel='stylesheet', href='/stylesheets/jquery-ui-1.10.3.custom.css')
+    link(rel='stylesheet', href='/stylesheets/jquery-ui-1.10.3.theme.css')
+    link(rel='stylesheet', href='/stylesheets/jquery.ui.1.10.3.ie.css')
+
+    link(rel='stylesheet', href='/stylesheets/Site.css')
+
+    script(src="/javascripts/libs/jquery-2.1.4.min.js")
+    script(src="/javascripts/libs/jquery.validate.min.js")
+    script(src="/javascripts/libs/jquery.validate.unobtrusive.min.js")
+
+    script(src="/javascripts/libs/bootstrap.min.js")
+
+    script(src="/javascripts/libs/jquery-ui.min.js")
+
+    script(src="/javascripts/libs/jquery.blockUI.js")
+
+    script(src="/javascripts/libs/jquery.jqGrid.min.js")
+    script(src="/javascripts/libs/i18n/grid.locale-es.js")
+
+    script(src="/javascripts/libs/angular.min.js")
+    script(src="/javascripts/libs/underscore.min.js")
+
+    script(src="/javascripts/utils.js")
+    script(src="/javascripts/app.js")
+    script(src="/javascripts/appdata.js")
+
+body
+
+  div#wrapper
+
+    div.head
+      nav(class="navbar navbar-default navbar-static-top primary",role="navigation",style="margin-bottom: 0")
+        div.navbar-header
+          div.navbar-brand
+            div.label Ejemplo NodeJSMySQL
+          button(type="button",class="navbar-toggle",data-toggle="collapse",data-target=".navbar-collapse")
+            span.sr-only
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        ul(class="nav navbar-top-links navbar-right")
+          li(class="dropdown",style="float:right;")
+            a(href="#")
+              i(class="fa fa-user fa-fw")
+          li(class="welcomeuser")
+            label Welcome
+            label Sanchez, Victor J.
+
+
+    div(id="navbar" class="navbar-collapse collapse")
+      ul(class="nav navbar-nav")
+        li(class="dropdown")
+          a(href="/home",role="button") Home
+          i(class="")
+        li(class="dropdown")
+          a(href="/pais",role="button") Pais
+          i(class="")
+        li(class="dropdown")
+          a(href="/estado",role="button") Estado
+          i(class="")
+
+    div(id="page-wrapper")
+      div(style="height: 5px;")
+      block content
+
+footer © 2017 Víctor J. Sánchez
+
+

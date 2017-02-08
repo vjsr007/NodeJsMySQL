@@ -1,0 +1,652 @@
+/************************************************
+                    JQUERY UI
+*************************************************/
+
+.ui-dialog .ui-dialog-titlebar {
+    /* padding: .4em 1em; */
+    position: relative;
+    padding: 5px 15px;
+    border: 0 0 0 1px solid;
+    border-color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.ui-dialog .ui-dialog-title {
+    float: left;
+    color: #404040;
+    font-weight: bold;
+    margin-top: 0; 
+    margin-bottom: 0; 
+    padding: 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ui-dialog .ui-dialog-titlebar-close span
+{
+    display: block;
+    margin: 5px;
+    text-indent: 9999px;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], input[type="password"], .ui-autocomplete-input, textarea, .uneditable-input {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #555555;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+.ui-button, .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
+    text-shadow: none;
+    background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, 0%, #e6e6e6, 100%);
+    background-image: -moz-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+    background-repeat: repeat-x;
+    border-color: #e0e0e0;
+    border-color: #ccc;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
+    color: black;
+}
+.ui-button-primary, .ui-dialog-buttonset .ui-button:not(:first-child) {
+    color: black;
+}
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button.ui-state-hover {
+    color: black;
+    background-color: #3276b1;
+}
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button.ui-state-hover:not(:first-child) {
+    color: black;
+    background-color: transparent;
+}
+.ui-selected .panel-primary { border: 1px dotted #FECA40; font-size:1em; }
+.ui-selected i { color: lightblue; }
+/************************************************
+                    BOOTSTRAP
+*************************************************/
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    /*margin-top: -10px;*/
+}
+.navbar-nav
+{
+    height: auto;
+}
+.navbar-nav > li
+{
+    height: auto;
+}
+.navbar-nav > li > a
+{
+    height: 35px;
+}
+.navbar-top-links
+{
+    height: 50px;
+}
+.btn
+{
+    width: 100%;
+    margin-bottom: 3px;
+}
+.form-control
+{
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.field-validation-error span
+{
+	color: red;
+	font-size: .8em;
+	text-decoration: wavy;
+	font-style: italic;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -35px;
+}
+
+#page-wrapper {
+    position: inherit;
+    padding: 0px 0px 0px 0px;
+    border-left: 1px solid #e7e7e7;
+    /*margin-top: 108px;*/
+}
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.list-group {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.list-group ul{
+    padding-left: 0;
+    margin-top: 5px;
+}
+.childList{
+    overflow-y: scroll;
+    max-height: 215px;
+}
+/*#tree > li:hover{
+    background-color: #ddd;
+}*/
+#tree > li > label{
+    cursor: pointer;
+}
+#tree label
+{
+    font-size: .95em;
+    display: inline-block;
+    color: #193F66;
+    font-weight: bold;
+    cursor: auto;
+    padding: 5px 5px 5px 5px;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 3px 5px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.badge {
+    display: inline-block;
+    min-width: 20px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #777;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.row {
+     margin-right: 0px; 
+     margin-left: 0px; 
+}
+tbody > tr > td {
+    padding: 0;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 110px;
+}
+.panel > .table-responsive {
+    margin-bottom: 0;
+    border: 0;
+    width: 100%;
+}
+/***********************************
+                SITE                   
+************************************/
+.LogoACE {
+  width: 204px;
+  height: 50px;
+  background: url('Logo_Chubb_verde.png');
+  background-size: 204px 34px;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  float:left;
+}
+.navbar-brand {
+    float: none;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: -10px;
+    width: 100%;
+    height: 75px;
+}
+.navbar-brand  label{
+    float: left;
+    color: #777;
+    margin-top: -35px;
+    margin-left: 75px;
+    font-family: Arial; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+}
+.navbar-brand  .label{
+    float: left;
+    color: #777;
+    margin-top: 15px;
+    margin-left: 25px;
+    font-family: Arial;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 220px;
+    text-align: left;
+    padding: 0px;
+}
+.navbar-default {
+    background: #fff;
+    border-color: none;
+    padding: 0px 0px 0px;
+}
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+    margin-top: -60px;
+    float: right !important;
+    margin-right: 10px;
+}
+.welcomeuser
+{
+    margin-top: -80px;
+    float:right;
+    margin-top: 15px;
+    color: #41535d;
+    text-decoration: none;
+}
+.navbar-nav {
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+.navbar-collapse {
+    padding-left: 15px;
+    overflow-x: visible;
+    -webkit-overflow-scrolling: touch;
+    border-top: none;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    background-color: #333F48 !important;
+    border-bottom: solid 6px #84bd00;
+}
+a {
+    color: #84bd00;
+    text-decoration: none;
+}
+.navbar-collapse li a {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: none;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FFF;
+}
+.in > li > a:hover, .in > li > a:focus {
+    border-bottom-color: #3f4850 !important;
+    background-color: #3f4850 !important;
+    text-decoration: none;
+}
+.in .dropdown-menu {
+    background: #333;
+    width: auto !important;
+    float: left;
+    padding: 0;
+}
+.in .dropdown-menu a {
+    width: 100%;
+    font-size: 11px !important;
+}
+.in > li > a:hover, .in > li > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+.in .open > a, .in .open > a:hover, .in .open > a:focus {
+    background-color: #777;
+    border-color: #337ab7;
+}
+footer {
+    clear: both;
+    width: 100%;
+    background: #e2e2e2;
+    position: fixed;
+    bottom: -12px;
+    height: 30px;
+    left: 0;
+    font-size: 11px;
+}
+.head {
+    width: 100%;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    /*height: 107px !important;*/
+    z-index: 99;
+}
+.title-zone {
+    background-image: url(images/bg-title.png);
+    background-size: 100% 35px;
+    background-position: left bottom;
+    background-color: white;
+    overflow: hidden;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.title-zone h1 {
+    font-size: 12px;
+    float: left;
+    font-weight: bolder;
+    color: #84bd00;
+    padding-bottom: 0;
+    padding-top: 10px;
+    padding-left: 75px;
+    padding-right: 0;
+    text-transform: uppercase;
+    margin: 0;
+}
+.actual {
+    color: #193F66;
+}
+.grid label {
+    font-size: .95em;
+    display: inline-block;
+    color: #193F66;
+    font-weight: bold;
+    cursor: auto;
+    padding: 5px 5px 5px 5px;
+}
+button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: pointer;
+    color: buttontext;
+    padding: 2px 6px 3px;
+    border: none;
+    box-sizing: border-box;
+}
+.amount {
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.1);
+    width: 85px;
+    border: 0px transparent;
+    background-color: transparent;
+    text-align: right;
+    padding: 2px !important;
+    font-size: 0.97em !important;
+}
+.table-amount  {
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
+    color: black;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+    background-repeat: repeat-x;
+    border-color: lightgray;
+}
+.ui-dialog-buttonpane .ui-dialog-buttonset .ui-button.ui-state-hover{
+    color: black;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+    background-repeat: repeat-x;
+    border-color: #285e8e;
+}
+#GridMonto table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+}
+#GridMonto table > tbody > tr > td {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    padding: 3px;
+    vertical-align: top;
+}
+#GridMonto table > tbody > tr > td .btn-danger {
+    position: relative;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    top: -7px;
+}
+.droprow {
+    position: absolute;
+    top: 0;
+    left: 85px;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.listPersonal
+{
+    padding:0px;
+    margin: 0px;
+    margin-left: 5px;
+    font-size: .80em;
+    display:table; 
+    position: relative; 
+    width: 205px;
+}
+.listPersonal li
+{
+    color: #193F66;
+}
+.listPersonal li:nth-child(2n+1)
+{
+    color: #777;
+}
+.dropdown-titlemenu {
+    position: absolute;
+    top: 27px;
+    left: initial;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: initial;
+    padding: 5px 5px;
+    margin: 2px 0 0;
+    font-size: 0.80em;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    font-weight: normal;
+    opacity: 0.95;
+}
+.dropdown-titlemenu div
+{
+    display: inline;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px;
+    font-stretch: normal;
+    color: #193F66;
+    margin: 3px;
+    width: 155px;
+    height: 15px;
+    float: left;
+    overflow: hidden;
+    text-wrap:none;
+}
+.dropdown-titlemenu div:hover
+{
+    color: #84bd00;
+}
+.ui-widget-overlay {
+    position: fixed !important;
+}
+ui-button-text
+{
+    display: none !important;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+     padding-right: 3px; 
+     padding-left: 3px; 
+}
+.LogoHome {
+    display: block;
+    width: 50%;
+    height: 50%;
+    background: url('Ace_Limited_logo.svg');
+    background-size: 50% 50%;
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilos para tabla html*/
+table.grid > thead > tr > th {
+    background-color: #333F48;
+    color: white;
+    border-color: #84bd00;
+}
+
+table.grid td.icon, th.icon {
+    width: 25px;
+}
+
+table.grid td.date, th.date {
+    width: 70px;
+}
+
+table.grid td.description-small, th.description-small {
+    width: 70px;
+}
+
+table.grid td.description-medium, th.description-medium {
+    width: 150px;
+}
+
+table.grid td.description-large, th.description-large {
+    width: 300px;
+}
+
+.select-multi-container {
+    width:100%;
+    height:80px;
+    overflow:auto;
+}
+.scrollup
+{
+	background-color: #6EAC2C;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: 0 1px 1px #acdd4a;
+	-webkit-box-shadow: 0 1px 1px #acdd4a;
+	box-shadow: 0 1px 1px #acdd4a;
+	bottom: 4.0em;
+	color: white;
+	cursor: pointer;
+	display: none;
+	padding: 0.55em 1.0em;
+	position: fixed;
+	right: 1.2em;
+	font-weight: bold;
+    z-index: 10000;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.scrollup:hover
+{
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+.btn.btn-primary, .btn.btn-warning{
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 500px) {
+    .navbar-brand .label {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+#Solicitudes tr:nth-of-type(odd) { 
+	background: #eee; 
+}
+#Solicitudes thead > tr > th { 
+	background: #333F48; 
+	color: white; 
+	font-weight: bold;
+    padding-right: 10px;
+}
+#Solicitudes tbody > tr > td  {
+    padding-right: 10px;
+}

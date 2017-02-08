@@ -1,0 +1,17 @@
+extends layout
+block content
+  script(src="/javascripts/views/catalogo.pais.js")
+  div(id="frmPaises")
+    div(class="title-zone")
+        h1 Catálogo &gt; <span class="actual">País</span>
+        
+    div(class="row")
+      div(class="col-md-12")
+        div(class="panel panel-default")
+          div(class="panel-heading")
+           div
+             i(class="fa fa-building fa-fw") País
+          div(class="panel-body")
+            div(class="panel-body",style="overflow:scroll")
+              table(id="tblDatos",style="width:99%;")
+              div(id="tblDatosPager",style="text-align: center;")
