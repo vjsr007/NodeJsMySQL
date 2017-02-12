@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home NodeJsMySQL</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="/stylesheets/ui.jqgrid.css">
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/sb-admin-2.css">
+        <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+        <link rel="stylesheet" href="/stylesheets/jquery-ui-1.10.3.custom.css">
+        <link rel="stylesheet" href="/stylesheets/jquery-ui-1.10.3.theme.css">
+        <link rel="stylesheet" href="/stylesheets/jquery.ui.1.10.3.ie.css">
+        <link rel="stylesheet" href="/stylesheets/Site.css">
+        <script src="/javascripts/libs/jquery-2.1.4.min.js"></script>
+        <script src="/javascripts/libs/jquery.validate.min.js"></script>
+        <script src="/javascripts/libs/jquery.validate.unobtrusive.min.js"></script>
+        <script src="/javascripts/libs/bootstrap.min.js"></script>
+        <script src="/javascripts/libs/jquery-ui.min.js"></script>
+        <script src="/javascripts/libs/jquery.blockUI.js"></script>
+        <script src="/javascripts/libs/jquery.jqGrid.min.js"></script>
+        <script src="/javascripts/libs/i18n/grid.locale-es.js"></script>
+        <script src="/javascripts/libs/angular.min.js"></script>
+        <script src="/javascripts/libs/underscore.min.js"></script>
+        <script src="/javascripts/utils.js"></script>
+        <script src="/javascripts/app.js"></script>
+        <script src="/javascripts/appdata.js"></script>
+    </head>
+</html>
+<body>
+    <div id="wrapper">
+        <div class="head">
+            <nav role="navigation" style="margin-bottom: 0" class="navbar navbar-default navbar-static-top primary">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <div class="label">Ejemplo NodeJSMySQL</div>
+                    </div>
+                    <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li style="float:right;" class="dropdown">
+                        <a href="#">
+                            <i class="fa fa-user fa-fw"></i>
+                        </a>
+                    </li>
+                    <li class="welcomeuser">
+                        <label>Welcome</label>
+                        <label>Sanchez, Victor J.</label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="/home" role="button">Home</a>
+                    <i></i>
+                </li>
+                <li class="dropdown">
+                    <a href="/pais" role="button">Pais</a>
+                    <i></i>
+                </li>
+                <li class="dropdown">
+                    <a href="/estado" role="button">Estado</a>
+                    <i></i>
+                </li>
+            </ul>
+        </div>
+        <div id="page-wrapper">
+            <div style="height: 5px;"></div>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+<footer>© 2017 Víctor J. Sánchez</footer>

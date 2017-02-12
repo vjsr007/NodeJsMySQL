@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+    <script src="/javascripts/views/catalogo.estado.js"></script>
+    <div id="frmEstados">
+        <div class="title-zone">
+            <h1>
+                Catálogo &gt;<span class="actual">Estado</span>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div>
+                            <i class="fa fa-building fa-fw">Estado</i>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div style="overflow:scroll" class="panel-body">
+                            <table id="tblDatos" style="width:99%;"></table>
+                            <div id="pgDatos" style="text-align: center;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}                

@@ -1,0 +1,53 @@
+extends layout
+block content
+  script(src="/javascripts/views/catalogo.pais.js")
+  div(id="frmPaises")
+   div(class="title-zone")
+     h1 Catálogo &gt; <span class="actual">Paises</span>
+
+   div(class="container-fluid")
+    div(class="row")
+        div(class="col-lg-12")
+            div(class="panel panel-default")
+                div(class="panel-heading")
+                    i(class="fa fa-filter fa-fw") Filtros
+                    div(class="pull-right")
+                        div(class="btn-group")
+                            button(type="button",class="btn btn-default btn-xs dropdown-toggle",data-toggle="dropdown")
+                                Opciones
+                                span(class="caret")
+                            ul(class="dropdown-menu pull-right",role="menu")
+                                li(id="opAgregar")
+                                  a(href="#") Agregar
+                                li(id="opEditar")
+                                  a(href="#") Editar
+
+                div(class="panel-body")
+                    div(class="row")
+                        div(class="col-lg-2")
+                            label(for="txCodigo",class="control-label") Codigo
+                            input(type="text",class="form-control",id="txCodigo",maxlength="4",placeholder="Codigo del país")
+                        div(class="col-lg-5")
+                            label(for="txtNombre",class="control-label") Nombre
+                            input(type="text",class="form-control",id="txtNombre",placeholder="Nombre del país")
+                        div(class="col-lg-2")
+                            label
+                            div(class="checkbox")                        
+                                label
+                                    input(id="chkActivo",checked="checked",type="checkbox")
+                                    label(for="chkActivo") Activo
+
+                    br
+                    div(class="row")
+                        div(class="col-lg-1 pull-right")
+                            button(id="btnEditar",type="button",class="btn btn-primary")
+                              i(class="fa fa-edit") Editar
+                        div(class="col-lg-1 pull-right")
+                            button(id="btnAgregar",type="button",class="btn btn-primary")
+                              i(class="fa fa-plus") Agregar
+                        div(class="col-lg-1 pull-right")
+                            button(id="btnBuscar",type="button",class="btn btn-primary")
+                              i(class="fa fa-search") Buscar
+
+    include mixins/panelgrid
+    mixin panelgrid('Paises','tblDatos','tblDatosPager')

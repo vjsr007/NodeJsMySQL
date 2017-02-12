@@ -1,0 +1,8 @@
+extends layout
+block content
+  script(src="/javascripts/views/catalogo.estado.js")
+  div(id="frmEstados")
+    div(class="title-zone")
+        h1 Catálogo &gt; <span class="actual">Estado</span>
+    include mixins/panelgrid
+    mixin panelgrid('Estado','tblDatos','pgDatos')
