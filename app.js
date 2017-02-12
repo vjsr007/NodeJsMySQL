@@ -7,16 +7,25 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/');
 var routespais = require('./routes/pais.js');
 var routesestado = require('./routes/estado.js');
+var nunjucks = require('nunjucks');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+/*
+app.set('views', path.join(__dirname, 'viewsjade'));
 app.set('view engine', 'jade');
-
+*/
 /*
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 */
+
+nunjucks.configure('views', {
+  autoescape: true,
+  express   : app
+});
+app.engine( 'html', nunjucks.render ) ;
+app.set( 'view engine', 'html' ) ;
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
