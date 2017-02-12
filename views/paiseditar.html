@@ -1,0 +1,103 @@
+<script src="/javascripts/views/catalogo.editarpais.js"></script>
+<form id="frmEditarPais" role="form" action="/" method="post">
+    <div class="row">
+      <div class="col-lg-6">
+        <label for="PaisID">ID</label>
+      </div>
+      <div class="col-lg-6">
+        <input class="form-control" readonly="readonly" data-val="true" data-val-number="El campo ID debe ser un número." id="PaisID" name="PaisID" type="text" value="-1">
+      </div>
+      <div class="col-lg-12">
+            <span class="field-validation-valid" data-valmsg-for="PaisID" data-valmsg-replace="true"></span>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="Nombre">País</label>
+        </div>
+        <div class="col-lg-6">
+            <input class="form-control" data-val="true" data-val-length="La Longitud Máxima de País es de 100 caracteres." data-val-length-max="100" data-val-required="El campo País es Requerido." id="Nombre" name="Nombre" type="text" value="">
+        </div>
+        <div class="col-lg-12">
+            <span class="field-validation-valid" data-valmsg-for="Nombre" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="Codigo">Codigo</label>
+        </div>
+        <div class="col-lg-6">
+            <input class="form-control" data-val="true" data-val-length="La Longitud Máxima de Codigo es de 2 caracteres." data-val-length-max="2" data-val-required="El campo Codigo es Requerido." id="Codigo" name="Codigo" type="text" value="">
+        </div>
+        <div class="col-lg-12">
+            <span class="field-validation-valid" data-valmsg-for="Codigo" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="Moneda">Moneda</label>
+        </div>
+        <div class="col-lg-6">
+            <input class="form-control" data-val="true" data-val-length="La Longitud Máxima de Moneda es de 2 caracteres." data-val-length-max="2" data-val-required="El campo Moneda es Requerido." id="Moneda" name="Moneda" type="text" value="">
+        </div>
+        <div class="col-lg-12">
+            <span class="field-validation-valid" data-valmsg-for="Moneda" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="CodMoneda">Codigo Moneda</label>
+        </div>
+        <div class="col-lg-6">
+            <input class="form-control" data-val="true" data-val-length="La Longitud Máxima de Codigo Moneda es de 2 caracteres." data-val-length-max="2" data-val-required="El campo Codigo Moneda es Requerido." id="CodMoneda" name="CodMoneda" type="text" value="">
+        </div>
+        <div class="col-lg-12">
+            <span class="field-validation-valid" data-valmsg-for="CodMoneda" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="FechaUltimaModificacion">Ultima Modificación</label>
+        </div>
+        <div class="col-lg-6">
+            <input class="form-control" readonly="readonly" data-val="true" data-val-date="El campo Ultima Modificación debe ser una fecha." id="FechaUltimaModificacion" name="FechaUltimaModificacion" type="text" value="">
+        </div>
+        <div class="col-lg-12">
+            <span class="field-validation-valid" data-valmsg-for="FechaUltimaModificacion" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="UsuarioID">Usuario</label>
+        </div>
+        <div class="col-lg-6">
+            <input class="form-control" readonly="readonly" data-val="true" data-val-number="El campo Usuario debe ser un número." id="UsuarioID" name="UsuarioID" type="text" value="">
+        </div>
+        <div class="col-lg-12">
+            <span class="field-validation-valid" data-valmsg-for="UsuarioID" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">            
+            <input id="Activo" name="Activo" type="checkbox" value="true"><input name="Activo" type="hidden" value="false"> <label for="Activo"> Activo</label>                      
+        </div>
+    </div>
+    <div class="row" style="border-bottom: 1px solid gray;">
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-6">    
+            <button id="btnGuardar" type="button" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+        </div>
+        <div class="col-lg-6">
+            <button id="btnCerrar" type="button" class="btn btn-warning"><i class="fa fa-close"></i> Cerrar</button>
+        </div>
+    </div>
+    <div id="frmErrores" style="display:none;">
+        <div class="validation-summary-valid" data-valmsg-summary="true">
+          <ul>
+             <li style="display:none"></li>
+          </ul>
+        </div>
+    </div>
+</form>

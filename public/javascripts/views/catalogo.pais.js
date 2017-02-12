@@ -22,9 +22,9 @@ var Catalogo = {};
         get chkActivo() { return $form('#chkActivo') }
     };
     var urls = {
-        get EditarPais() { return window.webroot + "Catalogo/EditarPais" },
-        get AgregarPais() { return webroot + "Catalogo/AgregarPais" },
-        get PaisEditar() { return webroot + "Catalogo/PaisEditar" },
+        get EditarPais() { return webroot + "EditarPais" },
+        get AgregarPais() { return webroot + "AgregarPais" },
+        get PaisEditar() { return webroot + "paiseditar" },
     }
 
     var BuscarPaises = function () {
@@ -161,7 +161,7 @@ var Catalogo = {};
                     var data = $.parseJSON(response.responseText);
 
                     if(!data.Error){
-                        Utils.mostrarMensaje("Guardar País",  "Guardado Exitoso");
+                        Utils.mostrarMensaje("Guardar PaÃ­s",  "Guardado Exitoso");
                         BuscarPaises();
                     }
                     else{
@@ -191,7 +191,7 @@ var Catalogo = {};
                     var data = $.parseJSON(response.responseText);
 
                     if(!data.Error){
-                        Utils.mostrarMensaje("Guardar País", "Guardado Exitoso");
+                        Utils.mostrarMensaje("Guardar PaÃ­s", "Guardado Exitoso");
                         BuscarPaises();
                     }
                     else{
@@ -222,7 +222,7 @@ var Catalogo = {};
         var selRow = accion == "A" ? -1 : ctrls.grid.jqGrid('getGridParam', 'selrow');
 
         if (selRow) {
-            var titulo = accion == "A" ? "Agregar País" : "Editar País";
+            var titulo = accion == "A" ? "Agregar PaÃ­s" : "Editar PaÃ­s";
 
             modalPais = Utils.mostrarModal(
                             titulo,
@@ -235,7 +235,7 @@ var Catalogo = {};
                                 beforeClose: function (event, ui) {
                                     var $dialog = $(this);
 
-                                    Utils.mostrarConfirmar("", "¿Desea cerrar la ventana?", null, null, function () {
+                                    Utils.mostrarConfirmar("", "Â¿Desea cerrar la ventana?", null, null, function () {
                                         $dialog.dialog({ beforeClose: {} });
                                         $dialog.dialog('close');
                                     });
@@ -249,7 +249,7 @@ var Catalogo = {};
                         );
         }
         else {
-            Utils.mostrarMensaje("Catálogos", "Seleccione un registro");
+            Utils.mostrarMensaje("CatÃ¡logos", "Seleccione un registro");
         }
     }
 

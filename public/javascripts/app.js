@@ -1,4 +1,7 @@
-var webroot="";
+Ôªøvar webroot="";
+var _names = 	{
+					Sistema:"NodeJsMySQL"
+				};
 var App = {};
 (function (self) {
     "use strict";
@@ -10,7 +13,7 @@ var App = {};
     var NoAutencticadoReditect = webroot + "Login/Index";
 
     var init = function () {
-        ///<summary>EjecuciÛn al realizar $.ready()</summary>
+        ///<summary>Ejecuci√≥n al realizar $.ready()</summary>
         $("#cmbIdioma").change(function (e) {
             e.preventDefault();
             window.location = $('#' + $(this).val()).attr('href');
@@ -63,17 +66,22 @@ var App = {};
         }).ajaxSuccess(function (e, xhr, settings, data) {
             try { var data = $.parseJSON(data) } catch (e) { };
             if (data.NoAutenticado) {
-                Utils.mostrarMensaje("", "Se ha perdido la sesiÛn se redirigir· al inicio de sesiÛn", null, function () {
+                Utils.mostrarMensaje("", "Se ha perdido la sesi√≥n se redirigir√° al inicio de sesi√≥n", null, function () {
                     window.location = NoAutencticadoReditect;
                 });
 
                 return false;
             }
             if (data.NoAutorizado) {
-                Utils.mostrarMensaje("", "No tiene acceso a la siguiente funciÛn: " + settings.url);
+                Utils.mostrarMensaje("", "No tiene acceso a la siguiente funci√≥n: " + settings.url);
 
                 return false;
             }
+            if (data.error) {
+                throw new Error(data)
+
+                return false;
+            }			
         }).ajaxError(function (e, jqxhr, settings, thrownError) {
             $.unblockUI();
 
@@ -124,7 +132,7 @@ var App = {};
     var handledError = function () {
         window.onerror = function (message) {
             $.unblockUI();
-            Utils.mostrarMensaje(_names.Sistema, message);
+            Utils.mostrarMensaje(_names.Sistema, JSON.stringify(message));
         };
     }
 

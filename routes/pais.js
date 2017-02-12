@@ -8,9 +8,20 @@ router.use(function timeLog(req, res, next){
 });
 */
 
+router.post('/paiseditar', function(req, res){
+  res.render('paiseditar', {
+    title: 'Editar'
+  });
+});
+
+//router.post('/paiseditar', function(req, res){
+//  res.sendFile('paiseditar.html',{root: 'views/'});
+//});
+
+
 router.get('/pais', function(req, res){
   res.render('pais', {
-    title: 'País'
+    title: 'PaÃ­s'
   });
 });
 
