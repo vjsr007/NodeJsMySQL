@@ -15,7 +15,8 @@
     "serve-favicon": "2.3.0",
     "stylus": "0.54.5",
     "mysql": "^2.5.4",
-    "ejs": "^2.5.5"
+    "ejs": "^2.5.5",
+    "nunjucks ": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "3.1.0"
