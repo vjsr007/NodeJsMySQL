@@ -40,7 +40,7 @@ var Catalogo = {};
 	            CodMoneda: null,
 	            FechaUltimaModificacion: '1900/01/01',
 	            UsuarioID: null,
-                Activo : ctrls.chkActivo.is(":checked")
+                    Activo : ctrls.chkActivo.is(":checked")?1:0
             }
 
             AppData.obtenerPaises(postDataPais, function (data) {

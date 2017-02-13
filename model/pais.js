@@ -1,22 +1,10 @@
- //Obtiene ciudades
- exports.obtenerPaises = function(params){ 
-  return new Promise(function (resolve, reject){
-	var db = require('../config/database.js');
-	var mysql = require('mysql');
-	var connection = mysql.createConnection(db.config.mysql);
+ //Paises Model
+ (function(){
+     
+    exports.obtenerPaises = function(params){
+        var db = require('../config/database.js');
+        
+        return db.ejecutarQuery("CALL spObtenerPaises(?, ?, ?, ?)",[params.Activo,params.Nombre, params.Codigo, params.PaisID]);
+    };
 
-	connection.connect(function(err){
-		if(!err) {
-			connection.query('SELECT * FROM pais', function(err, rows, fields) {
-			connection.end();
-			if (!err)
-				resolve(rows);
-			else
-				reject({error: err});
-			}); 
-		} else {
-			reject({error: err});
-		}
-	});
-  });
-};
+ })();
