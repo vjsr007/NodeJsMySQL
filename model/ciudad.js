@@ -1,22 +1,9 @@
- //Obtiene ciudades
- exports.obtenerCiudades = function(){ 
-  return new Promise(function (resolve, reject){
-	var db = require('../config/database.js');
-	var mysql = require('mysql');
-	var connection = mysql.createConnection(db.config.mysql);
+ //Paises Model
+ (function(){
+     
+    exports.obtenerCiudades = function(params){
+        var db = require('../config/database.js');
+        return db.ejecutarQuery("SELECT * FROM ciudad");
+    };
 
-	connection.connect(function(err){
-		if(!err) {
-			connection.query('SELECT * FROM ciudad', function(err, rows, fields) {
-			connection.end();
-			if (!err)
-				resolve(rows);
-			else
-				reject({error: err});
-			}); 
-		} else {
-			reject({error: err});
-		}
-	});
-  });
-};
+ })();
