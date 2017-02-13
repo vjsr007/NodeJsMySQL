@@ -1,4 +1,4 @@
- //Paises Model
+ //Ciudades Model
  (function(){
      
     exports.obtenerCiudades = function(params){
