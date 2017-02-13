@@ -3,8 +3,7 @@
      
     exports.obtenerPaises = function(params){
         var db = require('../config/database.js');
-        
-        return db.ejecutarQuery("CALL spObtenerPaises(?, ?, ?, ?)",[params.Activo,params.Nombre, params.Codigo, params.PaisID]);
+        return db.ejecutarSP("CALL spObtenerPaises(?, ?, ?, ?)",[params.Activo,params.Nombre, params.Codigo, params.PaisID]);
     };
 
  })();
